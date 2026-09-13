@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "pinn_dataset": "/marc-projects/Remote Sensing/Hydrology/data/processed/pinn_climatology_features_k4_lag3.parquet",
+  "regional_dataset": "/marc-projects/Remote Sensing/Hydrology/data/processed/srilanka_hydrology_regional_monthly_0p5degree.parquet",
+  "pinn_runoff_target": "runoff_mm",
+  "regional_total_runoff_column": "total_runoff_mm",
+  "regional_surface_runoff_column": "surface_runoff_mm",
+  "regional_subsurface_runoff_column": "subsurface_runoff_mm",
+  "surface_runoff_recovered": true,
+  "subsurface_runoff_recovered": true,
+  "maximum_absolute_pinn_vs_source_total_difference_mm": 0.0,
+  "mean_absolute_pinn_vs_source_total_difference_mm": 0.0,
+  "pinn_runoff_matches_source_total_within_1e_4_mm": true,
+  "maximum_surface_plus_subsurface_identity_error_mm": 2.3169155554114695e-06,
+  "mean_surface_plus_subsurface_identity_error_mm": 9.81387389030396e-08,
+  "runoff_component_identity_pass_1e_4_mm": true
+}

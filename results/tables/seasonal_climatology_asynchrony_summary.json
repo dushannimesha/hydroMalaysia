@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "input_dataset": "/marc-projects/Remote Sensing/Hydrology/data/processed/srilanka_hydrology_regional_monthly_0p5degree.parquet",
+  "region_count": 33,
+  "regional_monthly_rows": 11880,
+  "climatology_rows_wide": 396,
+  "climatology_rows_long": 1980,
+  "years": "1982-2011",
+  "regions_with_positive_best_lag": 33,
+  "regions_with_best_lag_at_least_2_months": 3,
+  "best_lag_counts": {
+    "1": 30,
+    "2": 3
+  },
+  "median_same_month_precipitation_sm_correlation": 0.49947229277950783,
+  "minimum_same_month_precipitation_sm_correlation": 0.27361725226979,
+  "maximum_same_month_precipitation_sm_correlation": 0.6778587553476039,
+  "runoff_control_class_counts": {
+    "mixed": 16,
+    "storage-dominant": 11,
+    "precipitation-dominant": 6
+  },
+  "small_regions_lt_4_cells": 4,
+  "regional_climatology_wide": "/marc-projects/Remote Sensing/Hydrology/data/processed/regional_monthly_climatology_1982_2011_wide.csv",
+  "regional_climatology_long": "/marc-projects/Remote Sensing/Hydrology/data/processed/regional_monthly_climatology_1982_2011_long.csv",
+  "national_climatology": "/marc-projects/Remote Sensing/Hydrology/results/tables/national_monthly_climatology_1982_2011.csv",
+  "regional_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/regional_seasonality_asynchrony_metrics.csv",
+  "asynchrony_ranking": "/marc-projects/Remote Sensing/Hydrology/results/tables/regional_asynchrony_ranking.csv"
+}

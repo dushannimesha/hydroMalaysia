@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "interpretation_model": "Common standardized Ridge model fitted separately at every depth.",
+  "predictive_model_selections_unchanged": true,
+  "causal_interpretation_supported": false,
+  "interpretation_warning": "Coefficients are conditional model associations. Correlated component-lag predictors can redistribute coefficient magnitude and sign.",
+  "selected_alphas": {
+    "SM_0_10cm_mm": 100.0,
+    "SM_10_40cm_mm": 100.0,
+    "SM_40_100cm_mm": 100.0,
+    "SM_100_200cm_mm": 100.0
+  },
+  "bootstrap_iterations": 5000,
+  "bootstrap_unit": "Complete regional unit with all 12 months",
+  "stable_positive_precipitation_coefficients": 62,
+  "stable_negative_precipitation_coefficients": 0,
+  "multicollinearity": {
+    "feature_correlation_condition_number": 219.46236333508975,
+    "maximum_absolute_pairwise_correlation": 0.7541904955936317,
+    "maximum_variance_inflation_factor": 17.197973832176526,
+    "median_variance_inflation_factor": 6.813490163550654
+  },
+  "coefficient_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/component_lag_depth_standardized_coefficients.csv",
+  "memory_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/component_lag_depth_memory_indices.csv",
+  "alpha_selection": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_attribution_alpha_selection.csv",
+  "multicollinearity_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/attribution_feature_multicollinearity.csv"
+}

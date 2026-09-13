@@ -1,0 +1,5 @@
+target,depth_label,primary_alpha,sensitivity_alpha,coefficient_correlation,mean_absolute_coefficient_difference,maximum_absolute_coefficient_difference,coefficient_sign_agreement_fraction,primary_positive_coefficient_count,sensitivity_positive_coefficient_count
+SM_0_10cm_mm,0–10 cm,10.0,100.0,0.9093084626358076,0.04723014351952155,0.1643749929490817,1.0,16,16
+SM_10_40cm_mm,10–40 cm,10.0,100.0,0.9154046068264011,0.034034338270475493,0.1255678834496513,1.0,16,16
+SM_40_100cm_mm,40–100 cm,10.0,100.0,0.8774511619972611,0.03894092657485874,0.08615349990125251,1.0,16,16
+SM_100_200cm_mm,100–200 cm,30.0,300.0,0.8133754717041711,0.0623643180722811,0.14404105435256503,1.0,16,16

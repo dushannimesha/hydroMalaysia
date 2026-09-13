@@ -1,0 +1,35 @@
+{
+  "status": "LOCKED",
+  "primary_predictive_model": {
+    "configuration": "MLP",
+    "aggregation": "five-seed ensemble",
+    "geographic_cv_rmse_mm": 52.4886,
+    "geographic_cv_mae_mm": 42.2615,
+    "geographic_cv_r_squared": 0.8178,
+    "core_region_rmse_mm": 50.0427
+  },
+  "physics_informed_companion": {
+    "configuration": "PINN_P_lambda10",
+    "aggregation": "five-seed ensemble",
+    "geographic_cv_rmse_mm": 53.1023,
+    "geographic_cv_r_squared": 0.8135,
+    "core_region_rmse_mm": 49.454,
+    "precipitation_gradient_violation_fraction": 0.0455,
+    "bootstrap_difference_from_mlp_mm": 0.6137,
+    "bootstrap_95_interval_mm": [
+      -1.7497,
+      3.6152
+    ],
+    "interpretation": "Predictively indistinguishable from the MLP; retained for physics-consistency and sensitivity analysis."
+  },
+  "linear_baseline": "Ridge",
+  "pet_constraint_decision": "Do not use PET-constrained PINNs as primary models. Retain them only as ablations because they reduced physical violations but worsened ensemble geographic RMSE.",
+  "selection_basis": [
+    "Five-fold complete-region geographic evaluation",
+    "Five-seed ensembles",
+    "Paired complete-region bootstrap",
+    "Core-region sensitivity analysis",
+    "Gradient-violation diagnostics"
+  ],
+  "important_limitation": "Geographic generalization is conditional on the fixed precipitation NMF representation fitted before spatial CV."
+}

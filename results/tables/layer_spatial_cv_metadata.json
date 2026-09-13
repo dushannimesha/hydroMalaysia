@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "targets": {
+    "SM_0_10cm_mm": "0\u201310 cm",
+    "SM_10_40cm_mm": "10\u201340 cm",
+    "SM_40_100cm_mm": "40\u2013100 cm",
+    "SM_100_200cm_mm": "100\u2013200 cm"
+  },
+  "features": [
+    "K4_C1_L0_mm",
+    "K4_C1_L1_mm",
+    "K4_C1_L2_mm",
+    "K4_C1_L3_mm",
+    "K4_C2_L0_mm",
+    "K4_C2_L1_mm",
+    "K4_C2_L2_mm",
+    "K4_C2_L3_mm",
+    "K4_C3_L0_mm",
+    "K4_C3_L1_mm",
+    "K4_C3_L2_mm",
+    "K4_C3_L3_mm",
+    "K4_C4_L0_mm",
+    "K4_C4_L1_mm",
+    "K4_C4_L2_mm",
+    "K4_C4_L3_mm",
+    "PET_mm",
+    "latitude",
+    "longitude"
+  ],
+  "fold_count": 5,
+  "neural_seeds": [
+    20260806,
+    20260807,
+    20260808,
+    20260809,
+    20260810
+  ],
+  "neural_configurations": [
+    {
+      "configuration": "MLP",
+      "family": "MLP",
+      "lambda_precipitation": 0.0
+    },
+    {
+      "configuration": "PINN_P_lambda10",
+      "family": "PINN_P",
+      "lambda_precipitation": 10.0
+    }
+  ],
+  "primary_comparison": "Five-seed MLP ensemble versus five-seed precipitation-constrained PINN ensemble.",
+  "summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_summary.csv",
+  "fold_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_fold_metrics.csv",
+  "ensemble_predictions": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_ensemble_predictions.csv.gz"
+}

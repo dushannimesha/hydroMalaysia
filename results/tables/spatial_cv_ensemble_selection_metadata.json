@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "reference_configuration": "MLP",
+  "bootstrap_iterations": 20000,
+  "bootstrap_unit": "Complete regional unit with all 12 months.",
+  "region_count": 33,
+  "best_ensemble_configuration_by_rmse": "MLP",
+  "configurations_within_one_percent_of_best": [
+    "MLP"
+  ],
+  "selection_interpretation": "Statistical superiority requires the region-block 95% interval for RMSE difference to exclude zero. Otherwise treat models as predictively indistinguishable and select using physical consistency and scientific defensibility.",
+  "ensemble_summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_ensemble_summary.csv",
+  "bootstrap_comparisons": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_ensemble_block_bootstrap.csv",
+  "region_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_ensemble_region_metrics.csv",
+  "fold_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_ensemble_fold_metrics.csv",
+  "ensemble_predictions": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_ensemble_predictions.csv.gz"
+}

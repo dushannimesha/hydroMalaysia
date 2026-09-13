@@ -1,0 +1,10 @@
+{
+  "component_count": 3,
+  "best_random_seed": 20290839,
+  "rss": 35717.13695044289,
+  "relative_frobenius_error": 0.05344132881323967,
+  "explained_variance": 0.990294431623389,
+  "iterations": 700,
+  "converged": true,
+  "factorization_identity": "X approximately equals scaled_weights multiplied by normalized_components"
+}

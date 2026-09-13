@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "bootstrap_iterations_per_region": 1000,
+  "random_seed": 20260805,
+  "region_count": 33,
+  "core_region_count_native_cells_ge_4": 29,
+  "well_populated_region_count_native_cells_ge_10": 22,
+  "robustness_classes_all_regions": {
+    "strong": 30,
+    "weak": 2,
+    "moderate": 1
+  },
+  "robustness_classes_native_cells_ge_4": {
+    "strong": 26,
+    "weak": 2,
+    "moderate": 1
+  },
+  "robustness_classes_native_cells_ge_10": {
+    "strong": 20,
+    "moderate": 1,
+    "weak": 1
+  },
+  "regions_with_positive_lag_support_ge_0_90": 33,
+  "regions_with_observed_lag_support_ge_0_80": 30,
+  "regions_with_delta_r_ge_0_10": 33,
+  "median_observed_delta_r": 0.3917359083691616,
+  "median_bootstrap_observed_lag_support": 0.998,
+  "aet_exceeds_pet_records": 4569,
+  "total_regional_monthly_records": 11880,
+  "aet_exceeds_pet_percentage": 38.45959595959596,
+  "maximum_regional_aet_minus_pet_mm": 102.43015999999999,
+  "bootstrap_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/asynchrony_bootstrap_metrics.csv",
+  "aet_pet_by_region": "/marc-projects/Remote Sensing/Hydrology/results/tables/aet_pet_consistency_by_region.csv",
+  "aet_pet_by_month": "/marc-projects/Remote Sensing/Hydrology/results/tables/aet_pet_consistency_by_month.csv"
+}

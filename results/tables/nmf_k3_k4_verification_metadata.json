@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "primary_candidate": 3,
+  "sensitivity_candidate": 4,
+  "final_selection_pending": "Inspect seasonal profiles, spatial loadings, component redundancy and convergence.",
+  "candidate_summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/nmf_k3_k4_verification_summary.csv",
+  "component_diagnostics": "/marc-projects/Remote Sensing/Hydrology/results/tables/nmf_k3_k4_component_diagnostics.csv",
+  "top_region_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/nmf_k3_k4_top_regions.csv"
+}

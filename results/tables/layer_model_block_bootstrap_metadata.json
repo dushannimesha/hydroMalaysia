@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "bootstrap_iterations": 20000,
+  "bootstrap_unit": "Complete regional unit with all 12 months",
+  "random_seed": 20260806,
+  "pairwise_comparisons": [
+    [
+      "Ridge",
+      "MLP"
+    ],
+    [
+      "PINN_P_lambda10",
+      "MLP"
+    ],
+    [
+      "PINN_P_lambda10",
+      "Ridge"
+    ]
+  ],
+  "selection_policy": "Use a statistically significant Ridge-versus-MLP difference when present. When indistinguishable and within 1%, select Ridge for parsimony. Otherwise select lower observed RMSE while reporting uncertainty.",
+  "bootstrap_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_model_block_bootstrap.csv",
+  "selection_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/final_layer_model_selection.csv"
+}

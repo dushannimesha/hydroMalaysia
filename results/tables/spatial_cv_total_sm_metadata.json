@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "dataset": "/marc-projects/Remote Sensing/Hydrology/data/processed/pinn_climatology_features_k4_lag3.parquet",
+  "device": "cuda",
+  "outer_spatial_fold_count": 5,
+  "outer_test_policy": "Each complete geographic fold is tested once.",
+  "validation_policy": "Validation fold is the next geographic fold cyclically; remaining three folds are training.",
+  "conditional_generalization_note": "The precipitation NMF representation was fitted before geographic cross-validation. Results therefore measure soil-moisture-model generalization conditional on the fixed selected NMF precipitation representation.",
+  "neural_seeds": [
+    20260806,
+    20260807,
+    20260808,
+    20260809,
+    20260810
+  ],
+  "neural_configurations": [
+    {
+      "configuration": "MLP",
+      "model_family": "MLP",
+      "lambda_precipitation": 0.0,
+      "lambda_pet": 0.0
+    },
+    {
+      "configuration": "PINN_P_lambda10",
+      "model_family": "PINN_P",
+      "lambda_precipitation": 10.0,
+      "lambda_pet": 0.0
+    },
+    {
+      "configuration": "PINN_P_PET_lambda1",
+      "model_family": "PINN_P_PET",
+      "lambda_precipitation": 1.0,
+      "lambda_pet": 1.0
+    },
+    {
+      "configuration": "PINN_P_PET_lambda10",
+      "model_family": "PINN_P_PET",
+      "lambda_precipitation": 10.0,
+      "lambda_pet": 10.0
+    }
+  ],
+  "ridge_alpha_grid": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "feature_columns": [
+    "K4_C1_L0_mm",
+    "K4_C1_L1_mm",
+    "K4_C1_L2_mm",
+    "K4_C1_L3_mm",
+    "K4_C2_L0_mm",
+    "K4_C2_L1_mm",
+    "K4_C2_L2_mm",
+    "K4_C2_L3_mm",
+    "K4_C3_L0_mm",
+    "K4_C3_L1_mm",
+    "K4_C3_L2_mm",
+    "K4_C3_L3_mm",
+    "K4_C4_L0_mm",
+    "K4_C4_L1_mm",
+    "K4_C4_L2_mm",
+    "K4_C4_L3_mm",
+    "PET_mm",
+    "latitude",
+    "longitude"
+  ],
+  "target": "SM_total_mm",
+  "fold_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_total_sm_fold_metrics.csv",
+  "pooled_seed_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_total_sm_pooled_seed_metrics.csv",
+  "summary_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_total_sm_summary.csv",
+  "predictions": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_total_sm_predictions.csv.gz",
+  "model_directory": "/marc-projects/Remote Sensing/Hydrology/results/models/stage08_spatial_cv",
+  "final_model_selection": "PENDING_REVIEW"
+}

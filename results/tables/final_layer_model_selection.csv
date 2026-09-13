@@ -1,0 +1,5 @@
+target,depth_label,ridge_rmse_mm,mlp_rmse_mm,pinn_rmse_mm,ridge_minus_mlp_rmse_mm,ridge_minus_mlp_q025_mm,ridge_minus_mlp_q975_mm,ridge_mlp_relative_gap_percent,selected_primary_model,decision_strength,physics_companion_model
+SM_0_10cm_mm,0–10 cm,2.7625890420884978,2.653988106721419,3.0320918012412785,0.10860093536707893,-0.15882412878228136,0.40293585631076345,4.091990280289468,MLP,"Lower observed RMSE selected, but bootstrap interval includes zero",PINN_P_lambda10
+SM_10_40cm_mm,10–40 cm,7.941386331020614,7.9128495434286,8.163175101376321,0.028536787592013724,-0.6836552729689305,0.789942896817217,0.3606385719252393,Ridge,Statistically indistinguishable; Ridge selected for parsimony,PINN_P_lambda10
+SM_40_100cm_mm,40–100 cm,18.363521028209146,19.27320050645004,19.37044544566411,-0.9096794782408928,-3.250843307692418,1.540436447378109,4.953731241647436,Ridge,"Lower observed RMSE selected, but bootstrap interval includes zero",PINN_P_lambda10
+SM_100_200cm_mm,100–200 cm,51.29954497559591,54.69841703609493,54.72473007851481,-3.3988720604990235,-5.574841475127807,-1.388467457310882,6.6255403671044775,Ridge,Ridge significantly better,PINN_P_lambda10

@@ -1,0 +1,5 @@
+target,depth_label,minimum_mean_rmse_alpha,minimum_mean_validation_rmse_mm,selected_one_standard_error_alpha,selected_alpha_mean_validation_rmse_mm,selected_alpha_median_validation_rmse_mm,selected_alpha_at_upper_boundary
+SM_0_10cm_mm,0–10 cm,10.0,2.7614133397670377,100.0,2.903986168333785,3.1648357391195674,False
+SM_10_40cm_mm,10–40 cm,10.0,7.907811701386928,100.0,8.435644956312846,9.274042543594666,False
+SM_40_100cm_mm,40–100 cm,10.0,18.412416528166887,100.0,19.626978424522015,20.4277839481754,False
+SM_100_200cm_mm,100–200 cm,30.0,42.01687189341668,300.0,44.210011191444366,41.19958173076833,False

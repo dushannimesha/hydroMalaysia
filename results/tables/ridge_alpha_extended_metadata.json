@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "extended_alpha_grid": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "targets_still_at_upper_boundary": [],
+  "decision_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_decision.csv",
+  "alpha_selection_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_selection.csv",
+  "fold_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_cv_folds.csv"
+}
