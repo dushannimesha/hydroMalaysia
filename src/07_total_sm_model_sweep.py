@@ -14,9 +14,9 @@ Models
        dSM/dPET <= 0
 
 The existing 8/2/2 month split is used:
-    train      = 264 samples
-    validation = 66 samples
-    test       = 66 samples
+    train      = 1,376 samples
+    validation = 344 samples
+    test       = 344 samples
 
 All feature and target scaling is fitted using training data only.
 
@@ -97,10 +97,10 @@ FEATURE_COLUMNS = [
 
 PET_FEATURE = "PET_mm"
 
-EXPECTED_ROWS = 396
-EXPECTED_TRAIN = 264
-EXPECTED_VALIDATION = 66
-EXPECTED_TEST = 66
+EXPECTED_ROWS = 2_064
+EXPECTED_TRAIN = 1_376
+EXPECTED_VALIDATION = 344
+EXPECTED_TEST = 344
 
 RIDGE_ALPHA_GRID = [
     0.0,
@@ -202,6 +202,14 @@ def regression_metrics(
         prediction,
         dtype=float,
     ).reshape(-1)
+
+    if truth.size == 0 or prediction.size == 0:
+        return {
+            "rmse_mm": float("nan"),
+            "mae_mm": float("nan"),
+            "r_squared": float("nan"),
+            "mean_bias_mm": float("nan"),
+        }
 
     rmse = math.sqrt(
         mean_squared_error(

@@ -1,40 +1,40 @@
 {
   "status": "PASS",
-  "output_parquet": "/marc-projects/Remote Sensing/Hydrology/data/processed/pinn_climatology_features_k4_lag3.parquet",
-  "output_csv": "/marc-projects/Remote Sensing/Hydrology/data/processed/pinn_climatology_features_k4_lag3.csv",
-  "rows": 396,
-  "regions": 33,
+  "output_parquet": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\data\\processed\\pinn_climatology_features_k4_lag3.parquet",
+  "output_csv": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\data\\processed\\pinn_climatology_features_k4_lag3.csv",
+  "rows": 2064,
+  "regions": 172,
   "months_per_region": 12,
   "input_feature_count": 19,
   "precipitation_lag_feature_count": 16,
   "soil_moisture_target_count": 5,
   "missing_modelling_values": 0,
-  "maximum_climatology_nmf_input_difference_mm": 5.684341886080802e-14,
-  "maximum_component_sum_reconstruction_difference_mm": 2.2737367544323206e-13,
-  "maximum_soil_layer_sum_error_mm": 1.0166666584154882e-05,
+  "maximum_climatology_nmf_input_difference_mm": 8.526512829121202e-14,
+  "maximum_component_sum_reconstruction_difference_mm": 3.410605131648481e-13,
+  "maximum_soil_layer_sum_error_mm": 9.443933436159568e-06,
   "replication_split_counts": {
-    "train": 264,
-    "validation": 66,
-    "test": 66
+    "train": 1376,
+    "validation": 344,
+    "test": 344
   },
   "spatial_fold_region_counts": {
-    "0": 6,
-    "1": 7,
-    "2": 6,
-    "3": 6,
-    "4": 8
+    "0": 28,
+    "1": 32,
+    "2": 37,
+    "3": 33,
+    "4": 42
   },
-  "core_regions_ge_4_cells": 29,
-  "small_regions_lt_4_cells": 4,
+  "core_regions_ge_4_cells": 0,
+  "small_regions_lt_4_cells": 172,
   "monthly_dominance_totals": {
-    "K4_C1": 61,
-    "K4_C2": 155,
-    "K4_C3": 37,
-    "K4_C4": 143
+    "K4_C1": 452,
+    "K4_C2": 444,
+    "K4_C3": 1015,
+    "K4_C4": 153
   },
-  "feature_manifest": "/marc-projects/Remote Sensing/Hydrology/results/tables/pinn_feature_manifest_k4_lag3.json",
-  "replication_split_assignments": "/marc-projects/Remote Sensing/Hydrology/results/tables/replication_month_split_assignments.csv",
-  "spatial_fold_assignments": "/marc-projects/Remote Sensing/Hydrology/results/tables/spatial_cv_region_folds.csv",
-  "monthly_component_dominance": "/marc-projects/Remote Sensing/Hydrology/results/tables/selected_k4_monthly_dominance_counts.csv",
-  "predictor_target_correlations": "/marc-projects/Remote Sensing/Hydrology/results/tables/pinn_predictor_target_correlations.csv"
+  "feature_manifest": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\pinn_feature_manifest_k4_lag3.json",
+  "replication_split_assignments": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\replication_month_split_assignments.csv",
+  "spatial_fold_assignments": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\spatial_cv_region_folds.csv",
+  "monthly_component_dominance": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\selected_k4_monthly_dominance_counts.csv",
+  "predictor_target_correlations": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\pinn_predictor_target_correlations.csv"
 }

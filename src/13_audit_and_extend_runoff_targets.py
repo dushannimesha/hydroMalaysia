@@ -46,7 +46,7 @@ REGIONAL_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_regional_monthly_0p5degree.parquet"
+    / "malaysia_hydrology_regional_monthly_0p5degree.parquet"
 )
 
 OUTPUT_PARQUET = (
@@ -66,8 +66,8 @@ OUTPUT_CSV = (
 TABLE_DIR = ROOT / "results" / "tables"
 FIGURE_DIR = ROOT / "results" / "figures"
 
-EXPECTED_ROWS = 396
-EXPECTED_REGIONS = 33
+EXPECTED_ROWS = 2064
+EXPECTED_REGIONS = 172
 EXPECTED_MONTHS = 12
 
 TOTAL_RUNOFF_CANDIDATES = [

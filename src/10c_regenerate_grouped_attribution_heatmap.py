@@ -356,7 +356,7 @@ def main():
 
     fig.savefig(
         png_path,
-        dpi=500,
+        dpi=200,
         bbox_inches="tight",
         facecolor="white",
     )

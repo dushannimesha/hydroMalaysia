@@ -10,7 +10,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 from pathlib import Path
+
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
 
 import pandas as pd
 
@@ -39,6 +44,9 @@ EXTENDED_ALPHA_GRID = [
     1000.0,
     3000.0,
     10000.0,
+    30000.0,
+    100000.0,
+    300000.0,
 ]
 
 

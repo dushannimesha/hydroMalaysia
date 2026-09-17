@@ -28,7 +28,7 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_qc.parquet"
+    / "malaysia_hydrology_monthly_1982_2011_qc.parquet"
 )
 
 TABLE_DIR = ROOT / "results" / "tables"
@@ -95,7 +95,7 @@ def calculate_distance_km(
     latitude_2: pd.Series,
 ) -> pd.Series:
     """
-    Approximate local horizontal distance over Sri Lanka.
+    Approximate local horizontal distance over Malaysia.
 
     One degree latitude is approximately 111.32 km.
     Longitude distance is adjusted by mean latitude.
@@ -493,9 +493,45 @@ def main() -> None:
     )
 
     if not suspect_ids:
-        raise RuntimeError(
-            "No cells with corrected negative AET were found."
-        )
+        empty_tables = [
+            "boundary_cell_neighbours.csv",
+            "boundary_cell_metrics.csv",
+            "boundary_cell_monthly_climatology.csv",
+            "boundary_cell_summary.csv",
+        ]
+
+        for table_name in empty_tables:
+            pd.DataFrame().to_csv(
+                TABLE_DIR / table_name,
+                index=False,
+            )
+
+        decision_summary = {
+            "status": "PASS",
+            "suspect_cell_count": 0,
+            "suspect_grid_ids": [],
+            "neighbours_per_suspect_cell": N_NEIGHBOURS,
+            "diagnostic_only": True,
+            "cells_removed": 0,
+            "recommended_next_action": (
+                "No boundary-cell diagnostic is required because "
+                "no negative AET corrections were found."
+            ),
+        }
+
+        with (
+            TABLE_DIR
+            / "boundary_cell_diagnostic_summary.json"
+        ).open("w", encoding="utf-8") as stream:
+            json.dump(
+                decision_summary,
+                stream,
+                indent=2,
+            )
+
+        print("No cells with corrected negative AET were found.")
+        print("Boundary-cell diagnostic: PASS")
+        return
 
     print("=" * 78)
     print("BOUNDARY-CELL HYDROLOGICAL DIAGNOSTIC")

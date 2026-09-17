@@ -11,8 +11,8 @@
   "bootstrap_iterations": 20000,
   "bootstrap_unit": "Complete regional unit with all 12 months",
   "interpretation": "A positive and bootstrap-supported RMSE increase after dropping a complete mode indicates that the grouped mode contributes predictive information beyond the remaining modes and static predictors.",
-  "summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/grouped_mode_ablation_summary.csv",
-  "bootstrap": "/marc-projects/Remote Sensing/Hydrology/results/tables/grouped_mode_ablation_block_bootstrap.csv",
-  "importance_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/grouped_mode_importance_by_depth.csv",
-  "predictions": "/marc-projects/Remote Sensing/Hydrology/results/tables/grouped_mode_ablation_predictions.csv.gz"
+  "summary": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\grouped_mode_ablation_summary.csv",
+  "bootstrap": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\grouped_mode_ablation_block_bootstrap.csv",
+  "importance_table": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\grouped_mode_importance_by_depth.csv",
+  "predictions": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\grouped_mode_ablation_predictions.csv.gz"
 }

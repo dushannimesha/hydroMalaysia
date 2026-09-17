@@ -10,7 +10,7 @@
   "bootstrap_unit": "Complete regional unit with all 12 months",
   "outer_test_policy": "Each geographic fold tested once",
   "alpha_selection_policy": "Validation fold selects alpha; model then refitted on all non-test regions",
-  "summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/lag_window_geographic_summary.csv",
-  "bootstrap": "/marc-projects/Remote Sensing/Hydrology/results/tables/lag_window_geographic_block_bootstrap.csv",
-  "decision": "/marc-projects/Remote Sensing/Hydrology/results/tables/lag_window_geographic_decision.csv"
+  "summary": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\lag_window_geographic_summary.csv",
+  "bootstrap": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\lag_window_geographic_block_bootstrap.csv",
+  "decision": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\lag_window_geographic_decision.csv"
 }

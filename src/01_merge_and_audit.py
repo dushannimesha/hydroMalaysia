@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Merge and audit the Sri Lanka monthly hydrology dataset.
+Merge and audit the Malaysia monthly hydrology dataset.
 
 Outputs
 -------
-data/processed/srilanka_hydrology_monthly_1982_2011.parquet
-data/processed/srilanka_hydrology_monthly_1982_2011.csv.gz
+data/processed/malaysia_hydrology_monthly_1982_2011.parquet
+data/processed/malaysia_hydrology_monthly_1982_2011.csv.gz
 results/tables/annual_file_audit.csv
 results/tables/variable_summary.csv
 results/tables/grid_coordinates.csv
@@ -78,7 +78,10 @@ def stop(message: str) -> None:
 
 
 def extract_year(path: Path) -> int:
-    match = re.search(r"Hydrology_(\d{4})_M01_12\.csv$", path.name)
+    match = re.search(
+        r"Malaysia_Hydrology_(\d{4})_0p5deg_M01_12\.csv$",
+        path.name,
+    )
     if match is None:
         stop(f"Cannot extract year from filename: {path.name}")
     return int(match.group(1))
@@ -86,7 +89,7 @@ def extract_year(path: Path) -> int:
 
 def find_annual_files() -> list[Path]:
     files = sorted(
-        RAW_DIR.glob("SriLanka_Hydrology_*_M01_12.csv"),
+        RAW_DIR.glob("Malaysia_Hydrology_*_0p5deg_M01_12.csv"),
         key=extract_year,
     )
 
@@ -346,7 +349,7 @@ def main() -> None:
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
     print("=" * 78)
-    print("SRI LANKA HYDROLOGY — MERGE AND DATA AUDIT")
+    print("MALAYSIA HYDROLOGY — MERGE AND DATA AUDIT")
     print("=" * 78)
 
     files = find_annual_files()
@@ -479,12 +482,12 @@ def main() -> None:
 
     parquet_path = (
         PROCESSED_DIR
-        / "srilanka_hydrology_monthly_1982_2011.parquet"
+        / "malaysia_hydrology_monthly_1982_2011.parquet"
     )
 
     compressed_csv_path = (
         PROCESSED_DIR
-        / "srilanka_hydrology_monthly_1982_2011.csv.gz"
+        / "malaysia_hydrology_monthly_1982_2011.csv.gz"
     )
 
     annual_audit_path = TABLE_DIR / "annual_file_audit.csv"

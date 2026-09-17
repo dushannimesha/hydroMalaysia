@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Create the final analysis-ready Sri Lanka hydrology dataset.
+Create the final analysis-ready Malaysia hydrology dataset.
 
-Two coastal/boundary cells are excluded because their precipitation and PET
-are realistic, but their AET, runoff, and soil moisture are physically
-inconsistent and nearly constant relative to neighbouring cells.
+Five Malaysia grids are excluded because their AET, runoff, and soil
+moisture variables are missing for the complete 1982-2011 period.
 
 The QC dataset is preserved unchanged.
 """
@@ -24,35 +23,38 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_qc.parquet"
+    / "malaysia_hydrology_monthly_1982_2011_qc.parquet"
 )
 
 OUTPUT_PARQUET = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_analysis.parquet"
+    / "malaysia_hydrology_monthly_1982_2011_analysis.parquet"
 )
 
 OUTPUT_CSV = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_analysis.csv.gz"
+    / "malaysia_hydrology_monthly_1982_2011_analysis.csv.gz"
 )
 
 TABLE_DIR = ROOT / "results" / "tables"
 
 EXCLUDED_GRID_IDS = [
-    "SL_7.9500_79.7500",
-    "SL_8.7500_81.1500",
+    "MY_0p5_2.2500_104.7500",
+    "MY_0p5_2.2500_109.7500",
+    "MY_0p5_4.7500_100.2500",
+    "MY_0p5_4.7500_113.7500",
+    "MY_0p5_5.7500_103.2500",
 ]
 
-EXPECTED_ORIGINAL_GRIDS = 541
-EXPECTED_RETAINED_GRIDS = 539
+EXPECTED_ORIGINAL_GRIDS = 177
+EXPECTED_RETAINED_GRIDS = 172
 EXPECTED_RECORDS_PER_GRID = 360
-EXPECTED_EXCLUDED_ROWS = 720
-EXPECTED_RETAINED_ROWS = 194_040
+EXPECTED_EXCLUDED_ROWS = 1_800
+EXPECTED_RETAINED_ROWS = 61_920
 
 SOIL_LAYER_COLUMNS = [
     "soil_moisture_0_10cm_mm",

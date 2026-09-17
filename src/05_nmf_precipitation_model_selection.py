@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Robust NMF model selection for Sri Lankan seasonal precipitation.
+Robust NMF model selection for Malaysian seasonal precipitation.
 
 The input matrix has:
-    rows    = 33 regional units
+    rows    = 172 regional units
     columns = 12 monthly precipitation climatology values
 
 For each candidate component count K:
@@ -60,7 +60,7 @@ BASE_RANDOM_SEED = 20260805
 MAX_ITERATIONS = 5000
 TOLERANCE = 1e-8
 
-EXPECTED_REGION_COUNT = 33
+EXPECTED_REGION_COUNT = 172
 EXPECTED_MONTH_COUNT = 12
 
 
@@ -640,7 +640,7 @@ def make_model_selection_figure(
 
     figure.suptitle(
         "NMF model-selection diagnostics for "
-        "Sri Lankan seasonal precipitation",
+        "Malaysian seasonal precipitation",
         fontsize=13,
     )
 

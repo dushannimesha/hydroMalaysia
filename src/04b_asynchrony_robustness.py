@@ -33,7 +33,7 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_regional_monthly_0p5degree.parquet"
+    / "malaysia_hydrology_regional_monthly_0p5degree.parquet"
 )
 
 TABLE_DIR = ROOT / "results" / "tables"
@@ -44,7 +44,7 @@ MAXIMUM_LAG = 6
 RANDOM_SEED = 20260805
 
 EXPECTED_YEARS = list(range(1982, 2012))
-EXPECTED_REGIONS = 33
+EXPECTED_REGIONS = 172
 
 
 def safe_correlation(

@@ -106,8 +106,8 @@ SPATIAL_FOLD_COUNT = 5
 BOOTSTRAP_ITERATIONS = 5_000
 BOOTSTRAP_SEED = 20260806
 
-EXPECTED_ROWS = 396
-EXPECTED_REGIONS = 33
+EXPECTED_ROWS = 2_064
+EXPECTED_REGIONS = 172
 EXPECTED_MONTHS_PER_REGION = 12
 
 FEATURE_PATTERN = re.compile(
@@ -895,7 +895,7 @@ def make_coefficient_heatmap(
 
     figure, axis = plt.subplots(
         figsize=(14.5, 5.3),
-        constrained_layout=True,
+        constrained_layout=False,
     )
 
     image = axis.imshow(
@@ -996,7 +996,7 @@ def make_coefficient_heatmap(
     figure.savefig(
         FIGURE_DIR
         / "fig23_component_lag_depth_attribution.png",
-        dpi=400,
+        dpi=200,
         bbox_inches="tight",
     )
 

@@ -73,7 +73,7 @@ FIGURE_DIR = ROOT / "results" / "figures"
 SELECTED_K = 4
 SENSITIVITY_K = 3
 
-EXPECTED_REGIONS = 33
+EXPECTED_REGIONS = 172
 EXPECTED_MONTHS = 12
 
 STABILITY_THRESHOLD = 0.95
@@ -868,7 +868,7 @@ def plot_component_profiles(
 
     figure.suptitle(
         "Selected four-mode decomposition of "
-        "Sri Lankan seasonal precipitation",
+        "Malaysian seasonal precipitation",
         fontsize=14,
     )
 
@@ -916,9 +916,9 @@ def plot_dominant_component_map(
     for row in dominant.itertuples():
         rectangle = Rectangle(
             (
-                79.5
+                99.5
                 + row.region_lon_index * 0.5,
-                5.5
+                0.5
                 + row.region_lat_index * 0.5,
             ),
             0.5,
@@ -1056,7 +1056,7 @@ def plot_reconstruction_quality(
     )
 
     axes[0].set_title(
-        "All 396 region–month observations"
+        "All 2,064 region–month observations"
     )
 
     ranked = metrics.sort_values(

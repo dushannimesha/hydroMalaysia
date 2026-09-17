@@ -1,12 +1,9 @@
 {
   "status": "PASS",
-  "suspect_cell_count": 2,
-  "suspect_grid_ids": [
-    "SL_7.9500_79.7500",
-    "SL_8.7500_81.1500"
-  ],
+  "suspect_cell_count": 0,
+  "suspect_grid_ids": [],
   "neighbours_per_suspect_cell": 8,
   "diagnostic_only": true,
   "cells_removed": 0,
-  "recommended_next_action": "Review correlation, normalized RMSE and climatology against neighbouring cells before deciding whether to exclude the suspect cells from primary analyses."
+  "recommended_next_action": "No boundary-cell diagnostic is required because no negative AET corrections were found."
 }

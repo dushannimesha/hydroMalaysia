@@ -60,8 +60,8 @@ CONFIGURATION_ORDER = [
     "PINN_P_PET_lambda10",
 ]
 
-EXPECTED_ROWS_PER_CONFIGURATION = 396
-EXPECTED_REGION_COUNT = 33
+EXPECTED_ROWS_PER_CONFIGURATION = 2_064
+EXPECTED_REGION_COUNT = 172
 EXPECTED_MONTHS_PER_REGION = 12
 EXPECTED_NEURAL_SEEDS = 5
 
@@ -82,6 +82,14 @@ def calculate_metrics(
         prediction,
         dtype=float,
     ).reshape(-1)
+
+    if truth.size == 0 or prediction.size == 0:
+        return {
+            "rmse_mm": float("nan"),
+            "mae_mm": float("nan"),
+            "r_squared": float("nan"),
+            "mean_bias_mm": float("nan"),
+        }
 
     return {
         "rmse_mm": float(
@@ -550,6 +558,22 @@ def bootstrap_rmse_difference(
     regions = sorted(
         paired["region_id"].unique()
     )
+
+    if not regions:
+        return {
+            "region_count": 0,
+            "observed_candidate_rmse_mm": float("nan"),
+            "observed_reference_rmse_mm": float("nan"),
+            "observed_rmse_difference_mm": float("nan"),
+            "bootstrap_difference_mean_mm": float("nan"),
+            "bootstrap_difference_q025_mm": float("nan"),
+            "bootstrap_difference_q50_mm": float("nan"),
+            "bootstrap_difference_q975_mm": float("nan"),
+            "probability_candidate_lower_rmse": float("nan"),
+            "candidate_region_win_count": 0,
+            "reference_region_win_count": 0,
+            "regional_tie_count": 0,
+        }
 
     candidate_sse = []
     reference_sse = []

@@ -1,13 +1,13 @@
 {
   "component_count": 4,
-  "random_seed": 20300832,
+  "random_seed": 20300810,
   "solver": "coordinate descent",
   "initialization": "nndsvdar",
   "maximum_iterations": 20000,
   "tolerance": 1e-06,
-  "iterations": 14224,
+  "iterations": 1072,
   "converged": true,
-  "relative_error": 0.0387533373871791,
-  "explained_variance": 0.9948963052011314,
+  "relative_error": 0.06099039280033521,
+  "explained_variance": 0.9658649650356824,
   "component_ordering": "Components ordered by peak month."
 }

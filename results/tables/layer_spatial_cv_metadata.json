@@ -48,7 +48,7 @@
     }
   ],
   "primary_comparison": "Five-seed MLP ensemble versus five-seed precipitation-constrained PINN ensemble.",
-  "summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_summary.csv",
-  "fold_metrics": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_fold_metrics.csv",
-  "ensemble_predictions": "/marc-projects/Remote Sensing/Hydrology/results/tables/layer_spatial_cv_ensemble_predictions.csv.gz"
+  "summary": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\layer_spatial_cv_summary.csv",
+  "fold_metrics": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\layer_spatial_cv_fold_metrics.csv",
+  "ensemble_predictions": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\layer_spatial_cv_ensemble_predictions.csv.gz"
 }

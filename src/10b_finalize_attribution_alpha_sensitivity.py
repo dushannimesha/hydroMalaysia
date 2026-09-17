@@ -5,18 +5,18 @@ Finalize component-lag-depth attribution under two Ridge-alpha policies.
 Primary attribution policy
 --------------------------
 Use the alpha minimizing mean geographic-CV RMSE:
-    0-10 cm    : 10
-    10-40 cm   : 10
-    40-100 cm  : 10
-    100-200 cm : 30
+    0-10 cm    : 300
+    10-40 cm   : 300
+    40-100 cm  : 300
+    100-200 cm : 300
 
 Sensitivity policy
 ------------------
 Use the largest alpha within one standard error:
-    0-10 cm    : 100
-    10-40 cm   : 100
-    40-100 cm  : 100
-    100-200 cm : 300
+    0-10 cm    : 3000
+    10-40 cm   : 10000
+    40-100 cm  : 10000
+    100-200 cm : 3000
 
 The component-lag-depth conclusion is considered robust only when its
 broad memory pattern remains similar under both policies.
@@ -26,8 +26,13 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import shutil
 from pathlib import Path
+
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
 
 import matplotlib
 
@@ -61,16 +66,16 @@ SENSITIVITY_POLICY = "one_standard_error"
 
 ALPHA_POLICIES = {
     PRIMARY_POLICY: {
-        "SM_0_10cm_mm": 10.0,
-        "SM_10_40cm_mm": 10.0,
-        "SM_40_100cm_mm": 10.0,
-        "SM_100_200cm_mm": 30.0,
+        "SM_0_10cm_mm": 300.0,
+        "SM_10_40cm_mm": 300.0,
+        "SM_40_100cm_mm": 300.0,
+        "SM_100_200cm_mm": 300.0,
     },
     SENSITIVITY_POLICY: {
-        "SM_0_10cm_mm": 100.0,
-        "SM_10_40cm_mm": 100.0,
-        "SM_40_100cm_mm": 100.0,
-        "SM_100_200cm_mm": 300.0,
+        "SM_0_10cm_mm": 3000.0,
+        "SM_10_40cm_mm": 10000.0,
+        "SM_40_100cm_mm": 10000.0,
+        "SM_100_200cm_mm": 3000.0,
     },
 }
 

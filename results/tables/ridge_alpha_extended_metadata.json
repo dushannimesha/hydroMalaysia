@@ -13,10 +13,13 @@
     300.0,
     1000.0,
     3000.0,
-    10000.0
+    10000.0,
+    30000.0,
+    100000.0,
+    300000.0
   ],
   "targets_still_at_upper_boundary": [],
-  "decision_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_decision.csv",
-  "alpha_selection_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_selection.csv",
-  "fold_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/ridge_alpha_extended_cv_folds.csv"
+  "decision_table": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\ridge_alpha_extended_decision.csv",
+  "alpha_selection_table": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\ridge_alpha_extended_selection.csv",
+  "fold_table": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\ridge_alpha_extended_cv_folds.csv"
 }

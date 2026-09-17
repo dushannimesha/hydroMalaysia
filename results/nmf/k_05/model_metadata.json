@@ -1,9 +1,9 @@
 {
   "component_count": 5,
-  "best_random_seed": 20310848,
-  "rss": 6354.729892672293,
-  "relative_frobenius_error": 0.022541742094153928,
-  "explained_variance": 0.9982732024245449,
+  "best_random_seed": 20310806,
+  "rss": 364934.1506602304,
+  "relative_frobenius_error": 0.048156833021756024,
+  "explained_variance": 0.9787189364851732,
   "iterations": 5000,
   "converged": false,
   "factorization_identity": "X approximately equals scaled_weights multiplied by normalized_components"

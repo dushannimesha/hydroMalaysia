@@ -31,7 +31,12 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
+
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
 
 import matplotlib
 
@@ -104,8 +109,8 @@ FOLD_COUNT = 5
 BOOTSTRAP_ITERATIONS = 20_000
 BOOTSTRAP_SEED = 20260806
 
-EXPECTED_ROWS = 396
-EXPECTED_REGIONS = 33
+EXPECTED_ROWS = 2_064
+EXPECTED_REGIONS = 172
 EXPECTED_MONTHS = 12
 
 
@@ -132,6 +137,14 @@ def metrics(
         prediction,
         dtype=float,
     ).reshape(-1)
+
+    if truth.size == 0 or prediction.size == 0:
+        return {
+            "rmse_mm": float("nan"),
+            "mae_mm": float("nan"),
+            "r_squared": float("nan"),
+            "bias_mm": float("nan"),
+        }
 
     return {
         "rmse_mm": float(
@@ -924,7 +937,7 @@ def make_figure(
     figure.savefig(
         FIGURE_DIR
         / "fig26_lag_window_geographic_ablation.png",
-        dpi=400,
+        dpi=200,
         bbox_inches="tight",
     )
 

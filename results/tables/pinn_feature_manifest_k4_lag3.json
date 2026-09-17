@@ -1,7 +1,7 @@
 {
-  "dataset": "/marc-projects/Remote Sensing/Hydrology/data/processed/pinn_climatology_features_k4_lag3.parquet",
-  "row_count": 396,
-  "region_count": 33,
+  "dataset": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\data\\processed\\pinn_climatology_features_k4_lag3.parquet",
+  "row_count": 2064,
+  "region_count": 172,
   "month_count_per_region": 12,
   "maximum_precipitation_lag": 3,
   "precipitation_component_count": 4,

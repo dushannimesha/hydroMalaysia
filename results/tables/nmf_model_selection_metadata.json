@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "input_climatology": "/marc-projects/Remote Sensing/Hydrology/data/processed/regional_monthly_climatology_1982_2011_wide.csv",
+  "input_climatology": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\data\\processed\\regional_monthly_climatology_1982_2011_wide.csv",
   "matrix_shape": [
-    33,
+    172,
     12
   ],
   "candidate_component_counts": [
@@ -22,7 +22,7 @@
   "loss": "Frobenius",
   "normalization": "No normalization was applied to the input precipitation matrix. Best-factor component profiles were sum-normalized only for reporting, with scale transferred into regional loadings.",
   "selection_policy": "Inspect reconstruction elbow, marginal error reduction, explained variance and component stability. No K is selected automatically.",
-  "all_initializations_table": "/marc-projects/Remote Sensing/Hydrology/results/tables/nmf_all_initializations.csv",
-  "model_selection_summary": "/marc-projects/Remote Sensing/Hydrology/results/tables/nmf_model_selection_summary.csv",
-  "factorizations_directory": "/marc-projects/Remote Sensing/Hydrology/results/nmf"
+  "all_initializations_table": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\nmf_all_initializations.csv",
+  "model_selection_summary": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\tables\\nmf_model_selection_summary.csv",
+  "factorizations_directory": "C:\\Users\\nimesha\\OneDrive\\Desktop\\Hydrology\\results\\nmf"
 }

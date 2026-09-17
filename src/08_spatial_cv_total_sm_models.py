@@ -102,8 +102,8 @@ FEATURE_COLUMNS = [
 PET_FEATURE = "PET_mm"
 
 SPATIAL_FOLD_COUNT = 5
-EXPECTED_ROWS = 396
-EXPECTED_REGIONS = 33
+EXPECTED_ROWS = 2_064
+EXPECTED_REGIONS = 172
 
 RIDGE_ALPHA_GRID = [
     0.0,
@@ -224,6 +224,14 @@ def regression_metrics(
         prediction,
         dtype=float,
     ).reshape(-1)
+
+    if truth.size == 0 or prediction.size == 0:
+        return {
+            "rmse_mm": float("nan"),
+            "mae_mm": float("nan"),
+            "r_squared": float("nan"),
+            "mean_bias_mm": float("nan"),
+        }
 
     return {
         "rmse_mm": float(

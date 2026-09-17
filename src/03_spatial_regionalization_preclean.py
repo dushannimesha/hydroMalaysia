@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Construct 0.5-degree Sri Lanka hydrological regions.
+Construct 0.5-degree Malaysia hydrological regions.
 
 The script:
-1. Maps the 541 native 0.1-degree cells.
+1. Maps the 177 native 0.5-degree cells.
 2. Maps cells containing corrected negative AET values.
 3. Assigns native cells to stable 0.5 x 0.5 degree regions.
 4. Calculates latitude-area-weighted monthly regional means.
@@ -29,7 +29,7 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_qc.parquet"
+    / "malaysia_hydrology_monthly_1982_2011_qc.parquet"
 )
 
 PROCESSED_DIR = ROOT / "data" / "processed"
@@ -39,10 +39,10 @@ FIGURE_DIR = ROOT / "results" / "figures"
 REGION_SIZE_DEG = 0.5
 
 # Fixed origins ensure reproducible region identifiers.
-LON_ORIGIN = 79.5
-LAT_ORIGIN = 5.5
+LON_ORIGIN = 99.5
+LAT_ORIGIN = 0.5
 
-EXPECTED_NATIVE_GRIDS = 541
+EXPECTED_NATIVE_GRIDS = 177
 EXPECTED_MONTHS_PER_GRID = 360
 
 HYDRO_COLUMNS = [
@@ -86,7 +86,7 @@ def assign_regions(frame: pd.DataFrame) -> pd.DataFrame:
     ).astype(int)
 
     result["region_id"] = (
-        "SLR_"
+        "MYS_"
         + result["region_lat_index"].map(
             lambda value: f"{value:02d}"
         )
@@ -483,7 +483,7 @@ def save_coverage_figure(
     axis.set_xlabel("Longitude (°E)")
     axis.set_ylabel("Latitude (°N)")
     axis.set_title(
-        "Sri Lanka hydrology-grid coverage, 1982–2011"
+        "malaysia hydrology-grid coverage, 1982–2011"
     )
 
     axis.set_xlim(
@@ -654,7 +654,7 @@ def main() -> None:
         )
 
     print("=" * 78)
-    print("SRI LANKA HYDROLOGY — SPATIAL REGIONALIZATION")
+    print("MALAYSIA HYDROLOGY — SPATIAL REGIONALIZATION")
     print("=" * 78)
 
     frame = pd.read_parquet(INPUT_PATH)
@@ -701,12 +701,12 @@ def main() -> None:
 
     regional_parquet_path = (
         PROCESSED_DIR
-        / "srilanka_hydrology_regional_monthly_0p5degree.parquet"
+        / "malaysia_hydrology_regional_monthly_0p5degree.parquet"
     )
 
     regional_csv_path = (
         PROCESSED_DIR
-        / "srilanka_hydrology_regional_monthly_0p5degree.csv.gz"
+        / "malaysia_hydrology_regional_monthly_0p5degree.csv.gz"
     )
 
     inventory_path = (

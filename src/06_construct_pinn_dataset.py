@@ -50,7 +50,7 @@ REGIONAL_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_regional_monthly_0p5degree.parquet"
+    / "malaysia_hydrology_regional_monthly_0p5degree.parquet"
 )
 
 CONTRIBUTION_PATH = (
@@ -81,7 +81,7 @@ OUTPUT_CSV = (
     / "pinn_climatology_features_k4_lag3.csv"
 )
 
-EXPECTED_REGIONS = 33
+EXPECTED_REGIONS = 172
 EXPECTED_MONTHS = 12
 EXPECTED_ROWS = EXPECTED_REGIONS * EXPECTED_MONTHS
 
@@ -139,7 +139,7 @@ def load_regional_climatology() -> pd.DataFrame:
                 round(
                     (
                         float(values.iloc[0])
-                        - 79.5
+                        - 99.5
                     )
                     / 0.5
                 )
@@ -151,7 +151,7 @@ def load_regional_climatology() -> pd.DataFrame:
                 round(
                     (
                         float(values.iloc[0])
-                        - 5.5
+                        - 0.5
                     )
                     / 0.5
                 )

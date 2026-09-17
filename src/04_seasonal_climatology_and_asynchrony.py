@@ -47,7 +47,7 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_regional_monthly_0p5degree.parquet"
+    / "malaysia_hydrology_regional_monthly_0p5degree.parquet"
 )
 
 INVENTORY_PATH = (
@@ -61,7 +61,7 @@ PROCESSED_DIR = ROOT / "data" / "processed"
 TABLE_DIR = ROOT / "results" / "tables"
 FIGURE_DIR = ROOT / "results" / "figures"
 
-EXPECTED_REGION_COUNT = 33
+EXPECTED_REGION_COUNT = 172
 EXPECTED_MONTHS_PER_REGION = 360
 EXPECTED_YEARS = list(range(1982, 2012))
 
@@ -689,7 +689,7 @@ def plot_regional_monthly_patterns(
         nrows=row_count,
         ncols=column_count,
         figsize=(15.0, 18.0),
-        sharex=True,
+        sharex=False,
         squeeze=False,
     )
 
@@ -1020,7 +1020,7 @@ def plot_asynchrony_maps(
 
     figure.suptitle(
         "Regional precipitation–soil-moisture "
-        "asynchrony in Sri Lanka",
+        "asynchrony in Malaysia",
         fontsize=14,
     )
 
@@ -1175,7 +1175,7 @@ def main() -> None:
 
     print("=" * 78)
     print(
-        "SRI LANKA HYDROLOGY — "
+        "MALAYSIA HYDROLOGY — "
         "SEASONAL CLIMATOLOGY AND ASYNCHRONY"
     )
     print("=" * 78)

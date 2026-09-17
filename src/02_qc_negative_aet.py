@@ -6,8 +6,8 @@ The original merged dataset is never modified.
 
 Outputs
 -------
-data/processed/srilanka_hydrology_monthly_1982_2011_qc.parquet
-data/processed/srilanka_hydrology_monthly_1982_2011_qc.csv.gz
+data/processed/malaysia_hydrology_monthly_1982_2011_qc.parquet
+data/processed/malaysia_hydrology_monthly_1982_2011_qc.csv.gz
 
 results/tables/negative_aet_records.csv
 results/tables/negative_aet_by_year.csv
@@ -29,21 +29,21 @@ INPUT_PATH = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011.parquet"
+    / "malaysia_hydrology_monthly_1982_2011.parquet"
 )
 
 OUTPUT_PARQUET = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_qc.parquet"
+    / "malaysia_hydrology_monthly_1982_2011_qc.parquet"
 )
 
 OUTPUT_CSV = (
     ROOT
     / "data"
     / "processed"
-    / "srilanka_hydrology_monthly_1982_2011_qc.csv.gz"
+    / "malaysia_hydrology_monthly_1982_2011_qc.csv.gz"
 )
 
 TABLE_DIR = ROOT / "results" / "tables"

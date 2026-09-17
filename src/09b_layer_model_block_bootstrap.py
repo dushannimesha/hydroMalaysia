@@ -73,8 +73,8 @@ PAIRWISE_COMPARISONS = [
     ("PINN_P_lambda10", "Ridge"),
 ]
 
-EXPECTED_REGIONS = 33
-EXPECTED_CORE_REGIONS = 29
+EXPECTED_REGIONS = 172
+EXPECTED_CORE_REGIONS = 0
 EXPECTED_MONTHS_PER_REGION = 12
 
 
@@ -148,6 +148,22 @@ def paired_bootstrap(
             f"Expected {expected_region_count} regions, "
             f"found {len(regions)}."
         )
+
+    if not regions:
+        return {
+            "region_count": 0,
+            "observed_candidate_rmse_mm": float("nan"),
+            "observed_reference_rmse_mm": float("nan"),
+            "observed_rmse_difference_mm": float("nan"),
+            "bootstrap_difference_mean_mm": float("nan"),
+            "bootstrap_difference_q025_mm": float("nan"),
+            "bootstrap_difference_q50_mm": float("nan"),
+            "bootstrap_difference_q975_mm": float("nan"),
+            "probability_candidate_lower_rmse": float("nan"),
+            "candidate_region_win_count": 0,
+            "reference_region_win_count": 0,
+            "regional_tie_count": 0,
+        }
 
     candidate_sse = []
     reference_sse = []

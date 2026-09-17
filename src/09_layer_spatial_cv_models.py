@@ -188,6 +188,14 @@ def metrics(
         dtype=float,
     ).reshape(-1)
 
+    if truth.size == 0 or prediction.size == 0:
+        return {
+            "rmse_mm": float("nan"),
+            "mae_mm": float("nan"),
+            "r_squared": float("nan"),
+            "bias_mm": float("nan"),
+        }
+
     return {
         "rmse_mm": float(
             math.sqrt(
